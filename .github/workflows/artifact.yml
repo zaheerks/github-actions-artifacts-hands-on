@@ -1,3 +1,4 @@
+---
 name: Workflow Demo
 
 on: [push]
@@ -5,7 +6,6 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -28,5 +28,5 @@ jobs:
       with:
         name: hello-artifact
         path: ./artifacts
-   - name: Display content of the text file
-     run: cat ./artifacts/hello.txt
+    - name: Display content of the text file
+      run: cat ./artifacts/hello.txt
